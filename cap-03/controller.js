@@ -1,7 +1,7 @@
-// File: chapter3/controller.js
 angular.module('app', [])
-  .controller('ListCtrl', [function() {
+  .controller('ListCtrl', ListCtrl);
 
+  function ListCtrl() {
     var self = this;
     self.items = [
       {id: 1, label: 'First', done: true},
@@ -14,4 +14,4 @@ angular.module('app', [])
         unfinished: !item.done
       };
     };
-}]);
+  };
