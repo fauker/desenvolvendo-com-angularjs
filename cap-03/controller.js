@@ -1,3 +1,4 @@
+(function () {
 angular.module('app', [])
   .controller('ListCtrl', ListCtrl);
 
@@ -15,3 +16,4 @@ angular.module('app', [])
       };
     };
   };
+})();
