@@ -1,0 +1,23 @@
+{
+  "name": "cap-03",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lucas Moreira"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "angular-mocks": "~1.4.7"
+  }
+}
