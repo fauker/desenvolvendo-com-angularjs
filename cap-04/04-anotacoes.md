@@ -37,16 +37,11 @@ controller.
 ##Validação de formulários e estados
 
 Estado do Formulário | Descrição
--------------------- |---------------
-$invalid             | Definido quando qualquer campo do formulário
-estiver inválido
-$valid               | É o inverso do estado anterior
-$pristine            | Todos os formulários em AngularJS começam com
-esse estado. Isso permite descorbrir se um usuário começou a digitar
-algo e modificou algum dos elementos do formulário.
-$dirty               | O inverso do $pristine e indica que o usuário fez
-alguma alteração (elas podem ser desfeitas, porém o $dirty fica ligado).
-$error               | Armazena todos os campos individuais e os erros
-em cada elemento do formulário.
+-------------------- | -------------------------------------
+$invalid | Definido quando qualquer campo do formulário estiver inválido
+$valid | É o inverso do estado anterior
+$pristine | Todos os formulários em AngularJS começam com esse estado. Isso permite descorbrir se um usuário começou a digitar algo e modificou algum dos elementos do formulário.
+$dirty | O inverso do $pristine e indica que o usuário fez alguma alteração (elas podem ser desfeitas, porém o $dirty fica ligado).
+$error | Armazena todos os campos individuais e os erros em cada elemento do formulário.
 
 // Em leitura.
