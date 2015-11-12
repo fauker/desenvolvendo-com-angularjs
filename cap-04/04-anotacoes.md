@@ -25,9 +25,8 @@ Ao invés de fazer:
 </form>
 ``` 
 
-```
 Faça:
-
+```
 <form ng-submit="submeter()">
   <input type="text" ng-model="usuario.ctrl.nome">
   <input type="text" ng-model="usuario.ctrl.sobrenome"> 
