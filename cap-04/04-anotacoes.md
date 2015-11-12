@@ -28,8 +28,8 @@ Ao invés de fazer:
 Faça:
 ```
 <form ng-submit="submeter()">
-  <input type="text" ng-model="usuario.ctrl.nome">
-  <input type="text" ng-model="usuario.ctrl.sobrenome"> 
+  <input type="text" ng-model="ctrl.usuario.nome">
+  <input type="text" ng-model="ctrl.usuario.sobrenome"> 
 </form> 
 ```
 
