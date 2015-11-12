@@ -9,36 +9,36 @@ sistema.
 
 Serve para identificar os serviços disponibilizados pelo AngularJS.
 Quando criarmos nossos próprios serviços, não devemos utilizar o sinal
-de $ como prefixo, pois isso pode criar uma confusão para a equipe
-posteriormete.
+de $ como prefixo, pois isso pode gerar uma confusão para a equipe
+posteriormente.
 
 #### Em quais casos devemos criar serviços no AngularJS?
 
 Deve-se criar um serviço no AngularJS se o que estiver sendo
 implementado se enquadrar em um dos critérios gerais a seguir:
 
-- (O código deve ser reutilizável)
-- (Estados são pertinentes ao nível da aplicação, ou seja, devem ser
-  Singletons)
-- (É independente da visão)
-- (O código se integra com serviços de terceiros)
-- (Caching/Factories)
+- O código deve ser reutilizável
+- Estados são pertinentes ao nível da aplicação, ou seja, devem ser
+  Singletons
+- É independente da visão
+- O código se integra com serviços de terceiros
+- Caching/Factories
 
 #### A diferença entre factory, serviço e provedor
 
 Deve-se utilizar factory para definir serviços se você:
 
-- (segue um estilo funcional de programação)
-- (prefere retornar funções e objetos)
+- segue um estilo funcional de programação
+- prefere retornar funções e objetos
 
 Deve-se utilizar service para definir serviços se você:
 
-- (segue um estilo de programação Classe/OO)
+- segue um estilo de programação Classe/OO
 
 Deve-se utilizar provedores para definir serviços se você:
 
-- (precisa definir alguma configuração para o serviço antes da aplicação
-  ser carregada)
+- precisa definir alguma configuração para o serviço antes da aplicação
+  ser carregada
 
 Exemplos:
 
@@ -55,7 +55,7 @@ function ItemService() {
 
   return {
     list: function() {
-        return items;
+      return items;
      },
     add: function(item) {
       items.push(item);
