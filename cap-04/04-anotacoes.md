@@ -18,17 +18,21 @@ controller. Por exemplo:
 
 Ao invés de fazer: 
 
+```
 <form ng-submit="submeter()">
   <input type="text" ng-model="ctrl.nome">
   <input type="text" ng-model="ctrl.sobrenome"> 
-</form> 
+</form>
+``` 
 
+```
 Faça:
 
 <form ng-submit="submeter()">
   <input type="text" ng-model="usuario.ctrl.nome">
   <input type="text" ng-model="usuario.ctrl.sobrenome"> 
 </form> 
+```
 
 No momento em que o usuário digitar algo em um dos campos,
 automaticamente o AngularJS criará o objeto **usuario**, na
