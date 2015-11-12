@@ -47,4 +47,10 @@ $pristine | Todos os formulários em AngularJS começam com esse estado. Isso pe
 $dirty | O inverso do $pristine e indica que o usuário fez alguma alteração (elas podem ser desfeitas, porém o $dirty fica ligado).
 $error | Armazena todos os campos individuais e os erros em cada elemento do formulário.
 
-// Em leitura.
+## Formulários aninhados com ng-form 
+
+Com a tag ***form***, do HTML, não podemos aninhar formulários. Caso
+seja preciso fazer esse tipo de aninhamento, deve-se utilizar a diretiva
+**ng-form**.
+
+// em leitura
