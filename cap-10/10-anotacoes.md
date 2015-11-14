@@ -76,4 +76,4 @@ controllerAs: Ctrl
 Obs: Quando declaramos o controller no `$routeProvider`, não precisamos
 utilizar a diretiva `ng-controller` em nosso HTML.
 
-#### Usando resolver para veriicações prévias na rota
+#### Usando resolver para verificações prévias na rota
