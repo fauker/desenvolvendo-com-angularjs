@@ -45,4 +45,35 @@ function($routeProvider) {
 }
 ```
 
+#### Opções de roteamento
 
+A sintaxe da função `when()` completa é a seguinte:
+
+```
+$routeProvider.when(url, {
+  template: string,
+  templateUrl: string,
+  controller: string, function or array,
+  controllerAsL: string,
+  resolve, object<key, function>
+});
+```
+
+Obs: no objeto do `$routeProvider`, podemos definir um alias para o
+controlador de duas formas: 
+
+`controller: MyCtrl as Ctrl`
+
+ou 
+
+```
+controller: MyCtrl,
+controllerAs: Ctrl
+```
+
+***Ambas dão na mesma!***
+
+Quando declaramos o controller no `$routeProvider`, não precisamos
+utilizar a diretiva `ng-controller` em nosso HTML.
+
+#### Usando resolver para veriicações prévias na rota
