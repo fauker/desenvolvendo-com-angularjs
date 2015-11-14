@@ -71,9 +71,9 @@ controller: MyCtrl,
 controllerAs: Ctrl
 ```
 
-***Ambas dão na mesma!***
+***Ambas dão na mesma! A escolha é questão de gosto pessoal.***
 
-Quando declaramos o controller no `$routeProvider`, não precisamos
+Obs: Quando declaramos o controller no `$routeProvider`, não precisamos
 utilizar a diretiva `ng-controller` em nosso HTML.
 
 #### Usando resolver para veriicações prévias na rota
