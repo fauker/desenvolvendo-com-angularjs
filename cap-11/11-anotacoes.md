@@ -126,6 +126,7 @@ com as outras. Por exemplo:
 *atributo* e *elemento*, e nunca como *classe*. Exemplo:
 
 permitido: `<div minha-diretiva/>` e `<minha-diretiva/>`
+
 não permitido: `<div class="minha-diretiva"/>`
 
 *Dicas*:
@@ -139,3 +140,26 @@ elemtnos ou as diretivas para carga de imagens).
 
 - as diretivas de atributo normalmente são preferíveis para mudanças de
   comportamento. Por exemplo: ng-show, ng-class e assim por diante.
+
+#### A função link
+
+A função link faz pela diretiva o que um controlador faz uma visão -
+define APIs e funções necessárias à diretiva, além de manipular e
+trabalhar com o DOM.
+
+O AngularJS executa a função link para cada instância da diretiva,
+portanto cada instância pode ter sua própria lógica de negócios completa
+e contida, sem afetar nenhuma outra instância da diretiva. A função
+*link* recebe um conjunto-padrão de argumentos, que permanece
+consistente entre as diretivas e é semelhante a:
+
+```
+link: function($scope, $element, $attrs) {}
+```
+
+Obs: tomar cuidado para não utilizar o $scope de forma indevida, pois
+ele pode afetar o $scope do controlador, por default.
+
+
+
+
