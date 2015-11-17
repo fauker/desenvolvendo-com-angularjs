@@ -160,6 +160,55 @@ link: function($scope, $element, $attrs) {}
 Obs: tomar cuidado para não utilizar o $scope de forma indevida, pois
 ele pode afetar o $scope do controlador, por default.
 
+#### Escopo
 
+Por padrão, toda diretiva herda o escopo de seu pai, que é passado a ela
+na função *link*.
+
+O AngularJS disponibiliza a chave *scope* n objeto de definição da
+diretiva para termos controle completo sobre o escopo do elemento
+relacionado à diretiva. A palavra *scope* pode assumir três valores:
+
+- **false**: É o valor default. Diz que o escopo da diretiva é
+  exatamente igual ao escopo do pai. Portanto a diretiva terá acesso a
+todas as variáveis e funções definidas no escopo-pai, e qualquer
+modificação feita se refletirá imediatamente no pai também.
+
+- **true**: Diz ao AngularJS que o escopo da diretiva herda o
+  escopo-pai, porém um escopo-filho próprio será criado. A diretiva
+então terá acesso a todas as variáveis e funções do escopo-pai, porém
+qualquer modificação que ela fizer não estartá disponível no pai.
+
+- **object**: Também podemos passar um objeto com chaves e valores para
+  o escopo. Isso diz ao AngularJS para criar um **escopo isolado**. Esse
+escopo não herda nada do pai e qualquer dado que o escopo-pai deva
+compartilhar com essa diretia deverá ser passado por meio de atributos
+HTML. É a melhor opção quando estivermos criando componentes
+reutilizáveis que devam ser independentes de como e onde eles serão
+usados.
+
+Para o objeto podemos especificar três tipos d evalores que podem ser
+passados, e que o AngularJS colocará diretamente no escopo da diretiva.
+São eles:
+
+- *=*: O sinal de *=* especifica que o valor do atributo no HTML deverá
+  ser tratado como um objeto JSON, que será associado ao escopo da
+diretiva de modo que qualquer alteração feita no escopo-pai estará
+automaticamente disponível na diretiva.
+
+- *@*: O sinal de *@* especifica que o valor do atributo no HTML deverá
+  ser tratado como uma string, que poderá ou não ter expressões de
+binding do AngularJS `({{}})`. O valor deverá ser calculado e o valor
+final será atribuído ao escopo da diretiva. Qualquer alteração no vaor
+também estará disponível na diretiva.
+
+- *&*: O sinal de *&* especifica que o valor do atributo no HTML é uma
+  função de algum controlador cuja referência deverá estar disponível à
+diretiva. A diretiva pode então disparar a função sempre que for
+necessário.
+
+#### replace
+
+Está obsoleto.
 
 
